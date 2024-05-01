@@ -1,0 +1,46 @@
+.background {
+    display: flex;
+    min-height: 100vh;
+    width: 78vw;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(45deg, rgb(26, 1, 117) 0%, rgba(225, 5, 34, 0) 70%) repeat scroll 0% 0%, 
+    linear-gradient(135deg, rgb(225, 5, 152) 10%, rgba(49, 5, 209, 0) 80%) repeat scroll 0% 0%, 
+    linear-gradient(225deg, hsla(179, 81%, 45%, 1) 10%, rgba(10, 219, 216, 0) 80%) repeat scroll 0% 0%,
+     rgba(0, 0, 0, 0) linear-gradient(315deg, rgb(189, 5, 245) 100%, rgba(9, 245, 5, 0) 70%) repeat scroll 0% 0%;
+  }
+  
+  /* Shapes */
+  .background .shape {
+    filter: blur(465px);
+    position: absolute;
+  }
+  
+  .background .shape:nth-child(1) {
+    background-color: #ffb0d8;
+    top: -340px;
+    width: 300px;
+    height: 300px;
+  }
+  
+  .background .shape:nth-child(2) {
+    left: 100px;
+    bottom: -150px;
+    background-color: #c26cf3;
+    width: 200px;
+    height: 210px;
+  }
+  
+  .background .shape:nth-child(3) {
+    background-color: #87cfdf;
+    bottom: -150px;
+    right: 100px;
+    width: 300px;
+    height: 300px;
+  }
+  
+  /* Other page styling */
+  * {
+    margin: 0;
+    padding: 0;
+  }

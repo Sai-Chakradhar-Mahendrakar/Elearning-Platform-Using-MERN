@@ -1,0 +1,7 @@
+.loader {
+    display: flex;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: black;
+    position: relative;
+  }

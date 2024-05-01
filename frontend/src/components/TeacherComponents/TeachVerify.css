@@ -1,0 +1,36 @@
+.main-container {
+    background-color: aqua;
+    padding: 80px;
+    height: 100vh;
+}
+
+.teacher-container {
+    background-color: #ffffff;
+    border-top-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    border-width: 0px;
+    padding: 20px;
+}
+
+
+.description-container {
+    overflow-y: scroll;
+    max-height: 70vh;
+}
+
+.checkbox {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.input-checkbox {
+    margin-right: 10px;
+}
+
+.span-word {
+    color: red;
+    font-family: Roboto;
+    font-weight: bold;
+    margin-right: 10px;
+}

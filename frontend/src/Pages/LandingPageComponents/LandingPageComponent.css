@@ -1,0 +1,63 @@
+
+.slick-prev {
+    position: absolute;
+    left: -60px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    z-index: 1; 
+  }
+  
+  
+  
+  
+ 
+  .slick-next {
+    position: absolute;
+    right: -60px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    z-index: 1; 
+  }
+  
+
+  .slick-prev:hover {
+  
+    color: #0056d2;
+  }
+  
+  .slick-next:hover {
+ 
+    color: #0056d2;
+  }
+
+
+  .slick-prev:before {
+    content: "🠸";
+    font-weight: 900;
+    font-size: 54px;
+    color:#0056d2 ;
+  }
+  .slick-next:before {
+    content: "🠺";
+    font-size: 54px;
+    font-weight: 900;
+    color:#0056d2 ;
+  }
+  
