@@ -9,7 +9,7 @@ import {
   actionsingUpSuccess,
 } from "./actionType";
 
-let baseURL = "http://localhost:8080/";
+let baseURL = "https://elearning-platform-using-mern-j5py.vercel.app/";
 
 export const loginFetch = (value) => (dispatch) => {
   dispatch(actionLoginLoading());

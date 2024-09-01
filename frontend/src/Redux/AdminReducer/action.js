@@ -9,7 +9,7 @@ const token = JSON.parse(localStorage.getItem('user'))?.token || "";
 
 export const addProduct=(data)=>(dispatch)=>{
   dispatch({type:PRODUCT_REQUEST})
-  fetch("http://localhost:8080/courses/add",{
+  fetch("https://elearning-platform-using-mern-j5py.vercel.app/courses/add",{
     method:"POST",
     headers:{
       "Content-Type":"application/json",
@@ -23,7 +23,7 @@ export const addProduct=(data)=>(dispatch)=>{
 
 export const addUser=(data)=>(dispatch)=>{
   dispatch({type:PRODUCT_REQUEST})
-  fetch("http://localhost:8080/users/register",{
+  fetch("https://elearning-platform-using-mern-j5py.vercel.app/users/register",{
     method:"POST",
     headers:{
       "Content-Type":"application/json",
@@ -37,7 +37,7 @@ export const addUser=(data)=>(dispatch)=>{
 export const addVideo=(data,courseId)=>(dispatch)=>{
   dispatch({type:PRODUCT_REQUEST})
   delete data.courseId
-  fetch(`http://localhost:8080/videos/add/${courseId}`,{
+  fetch(`https://elearning-platform-using-mern-j5py.vercel.app/videos/add/${courseId}`,{
     method:"POST",
     headers:{
       "Content-Type":"application/json",
@@ -52,7 +52,7 @@ export const addVideo=(data,courseId)=>(dispatch)=>{
 
 export const getProduct=(page,limit,search,order)=>(dispatch)=>{
     dispatch({type:PRODUCT_REQUEST})
-    axios.get(`http://localhost:8080/courses?page=${page}&limit=${limit}&q=${search}&sortBy=price&sortOrder=${order}`,{
+    axios.get(`https://elearning-platform-using-mern-j5py.vercel.app/courses?page=${page}&limit=${limit}&q=${search}&sortBy=price&sortOrder=${order}`,{
       headers:{
         Authorization:`Bearer ${token}`
       }
@@ -63,7 +63,7 @@ export const getProduct=(page,limit,search,order)=>(dispatch)=>{
 }
 export const getUser=(page,limit,search,order)=>(dispatch)=>{
     dispatch({type:PRODUCT_REQUEST})
-    axios.get(`http://localhost:8080/users?page=${page}&limit=${limit}`,{
+    axios.get(`https://elearning-platform-using-mern-j5py.vercel.app/users?page=${page}&limit=${limit}`,{
       headers:{
         Authorization:`Bearer ${token}`
       }
@@ -74,7 +74,7 @@ export const getUser=(page,limit,search,order)=>(dispatch)=>{
 
 export const getvideo=(page,limit,user)=>(dispatch)=>{
     dispatch({type:PRODUCT_REQUEST})
-    axios.get(`http://localhost:8080/videos?page=${page}&limit=${limit}&user=${user}`,{
+    axios.get(`https://elearning-platform-using-mern-j5py.vercel.app/videos?page=${page}&limit=${limit}&user=${user}`,{
       headers:{
         Authorization:`Bearer ${token}`
       }
@@ -86,7 +86,7 @@ export const getvideo=(page,limit,user)=>(dispatch)=>{
 
 export const patchProduct=(id,data)=>(dispatch)=>{
   dispatch({type:PRODUCT_REQUEST})
-  fetch(`http://localhost:8080/courses/update/${id}`,{
+  fetch(`https://elearning-platform-using-mern-j5py.vercel.app/courses/update/${id}`,{
     method:"PATCH",
     headers:{
       "Content-Type":"application/json",
@@ -99,7 +99,7 @@ export const patchProduct=(id,data)=>(dispatch)=>{
 }
 export const patchUser=(id,data)=>(dispatch)=>{
   dispatch({type:PRODUCT_REQUEST})
-  fetch(`http://localhost:8080/users/update/${id}`,{
+  fetch(`https://elearning-platform-using-mern-j5py.vercel.app/users/update/${id}`,{
     method:"PATCH",
     headers:{
       "Content-Type":"application/json",
@@ -114,7 +114,7 @@ export const patchUser=(id,data)=>(dispatch)=>{
 
 export const deleteProduct=(id)=>(dispatch)=>{
     dispatch({type:PRODUCT_REQUEST});
-    axios.delete(`http://localhost:8080/courses/delete/${id}`,{
+    axios.delete(`https://elearning-platform-using-mern-j5py.vercel.app/courses/delete/${id}`,{
       headers:{
         Authorization:`Bearer ${token}`
       }
@@ -123,7 +123,7 @@ export const deleteProduct=(id)=>(dispatch)=>{
 }
 export const deleteUsers=(id)=>(dispatch)=>{
     dispatch({type:PRODUCT_REQUEST});
-    axios.delete(`http://localhost:8080/users/delete/${id}`,{
+    axios.delete(`https://elearning-platform-using-mern-j5py.vercel.app/users/delete/${id}`,{
       headers:{
         Authorization:`Bearer ${token}`
       }

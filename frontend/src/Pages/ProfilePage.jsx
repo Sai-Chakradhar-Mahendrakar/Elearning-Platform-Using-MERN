@@ -52,7 +52,7 @@ const ProfilePage = () => {
     const id = userStore?.userId;
 
     axios
-      .patch(`http://localhost:8080/users/update/${id}`, obj)
+      .patch(`https://elearning-platform-using-mern-j5py.vercel.app/users/update/${id}`, obj)
       .then((res) => {
         dispatch(actionLoginSuccess(res?.data));
         localStorage.setItem(

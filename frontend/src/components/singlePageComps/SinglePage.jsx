@@ -43,7 +43,7 @@ export default function SinglePage() {
 
   // /courses/:courseID
 
-  let vdo_url = `http://localhost:8080/videos/courseVideos/${id}`;
+  let vdo_url = `https://elearning-platform-using-mern-j5py.vercel.app/videos/courseVideos/${id}`;
 
   console.log(vdo_url);
 

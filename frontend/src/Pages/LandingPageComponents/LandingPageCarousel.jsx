@@ -51,7 +51,7 @@ const LandingPageCarousel = () => {
   };
 
   useEffect(() => {
-    const url = "http://localhost:8080/courses/all";
+    const url = "https://elearning-platform-using-mern-j5py.vercel.app/courses/all";
     setLoading(true);
 
     fetch(url)

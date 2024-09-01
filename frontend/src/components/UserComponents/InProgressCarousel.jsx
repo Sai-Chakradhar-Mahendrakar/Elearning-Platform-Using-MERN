@@ -55,7 +55,7 @@ const InProgressCarousel = () => {
   useEffect(() => {
     const user = JSON.parse(localStorage.getItem("user"));
     // console.log(token.userId);
-    const url = `http://localhost:8080/users/userCourse/${user.userId}`;
+    const url = `https://elearning-platform-using-mern-j5py.vercel.app/users/userCourse/${user.userId}`;
 
     axios
       .get(url)
