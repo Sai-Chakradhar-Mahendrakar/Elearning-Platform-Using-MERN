@@ -1,17 +1,23 @@
 const mongoose = require("mongoose");
 require("dotenv").config();
 
-//Database Mongoose
-mongoose.connect('mongodb://127.0.0.1:27017/elearning', {
+// Use environment variable for MongoDB URI
+const mongoURI = process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/elearning';
+
+// Connect to MongoDB
+mongoose.connect(mongoURI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
-});
+})
+    .then(() => {
+        console.log("Database connected");
+    })
+    .catch((err) => {
+        console.error("Database connection error:", err);
+    });
+
 const db = mongoose.connection;
-db.on("error", console.error.bind(console, "connection error:"));
-db.once("open", () => {
-    console.log("Database connected");
-});
 
 module.exports = {
-  db
+    db
 };
