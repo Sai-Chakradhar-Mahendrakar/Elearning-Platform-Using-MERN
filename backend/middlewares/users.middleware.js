@@ -16,7 +16,7 @@ const auth = (req, res, next) => {
         req.body.role = decoded.role;
         next();
       } else {
-        res.status(200).json({ msg: "not authorized" });
+        res.status(401).json({ msg: "not authorized" });
       }
     } catch (error) {
       res.status(400).json({ msg: error.message });
